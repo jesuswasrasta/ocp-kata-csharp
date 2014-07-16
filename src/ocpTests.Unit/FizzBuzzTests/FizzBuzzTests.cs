@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+using NUnit.Framework;
 using Ocp.FizzBuzz;
 
 namespace ocpTests.Unit.FizzBuzzTests
@@ -7,11 +8,12 @@ namespace ocpTests.Unit.FizzBuzzTests
     public class FizzBuzzTests
     {
          private FizzBuzzGame _game;
-
+        
 		[SetUp]
-		public void SetUp() 
-	    {
-		   _game = new FizzBuzzGame();
+		public void SetUp()
+		{
+		    var regole = new List<IRegola> {new RegolaMultiplaDi1(), new RegolaMultiploDi3(), new RegolaMultiploDi5(), new RegolaMultiplaDi7()};
+            _game = new FizzBuzzGame(regole);
 		}
 
 		[Test]
@@ -21,35 +23,36 @@ namespace ocpTests.Unit.FizzBuzzTests
 			Assert.AreEqual("2", _game.Say(2));
 		}
 
-		[Test, Ignore]
+		[Test]
 		public void MultiplesOfThree()
 	    {
 			Assert.AreEqual("Fizz", _game.Say(3));
 			Assert.AreEqual("Fizz", _game.Say(6));
 		}
 
-		[Test, Ignore]
+		[Test]
 		public void MultiplesOfFive()
 	    {
 			Assert.AreEqual("Buzz", _game.Say(5));
 			Assert.AreEqual("Buzz", _game.Say(10));
 		}
 
-		[Test, Ignore]
+		[Test]
 		public void MultiplesOfFiveAndThree() 
 	    {
 			Assert.AreEqual("FizzBuzz", _game.Say(15));
 			Assert.AreEqual("FizzBuzz", _game.Say(30));
 		}
 
-		[Test, Ignore]
+		[Test
+        ]
 		public void MultiplesOfSeven() 
 	    {
 			Assert.AreEqual("Bang", _game.Say(7));
 			Assert.AreEqual("Bang", _game.Say(14));
 		}
 
-		[Test, Ignore]
+		[Test]
 		public void MultiplesOfSevenAndThree() 
 		{
 			Assert.AreEqual("FizzBang", _game.Say(7*3));

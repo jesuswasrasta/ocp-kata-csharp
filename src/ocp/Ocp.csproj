@@ -43,6 +43,12 @@
     <Compile Include="Customer\Customer.cs" />
     <Compile Include="Customer\CustomerBase.cs" />
     <Compile Include="FizzBuzz\FizzBuzzGame.cs" />
+    <Compile Include="FizzBuzz\Formatter.cs" />
+    <Compile Include="FizzBuzz\IRegola.cs" />
+    <Compile Include="FizzBuzz\RegolaMultiplaDi1.cs" />
+    <Compile Include="FizzBuzz\RegolaMultiplaDi7.cs" />
+    <Compile Include="FizzBuzz\RegolaMultiploDi3.cs" />
+    <Compile Include="FizzBuzz\RegolaMultiploDi5.cs" />
     <Compile Include="Monopoly\MonopolyPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RockPaperScissors\RockPaperScissorsGame.cs" />
