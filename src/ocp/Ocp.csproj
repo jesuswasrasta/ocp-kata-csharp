@@ -43,7 +43,6 @@
     <Compile Include="Customer\Customer.cs" />
     <Compile Include="Customer\CustomerBase.cs" />
     <Compile Include="FizzBuzz\FizzBuzzGame.cs" />
-    <Compile Include="FizzBuzz\Formatter.cs" />
     <Compile Include="FizzBuzz\IRegola.cs" />
     <Compile Include="FizzBuzz\RegolaMultiplaDi1.cs" />
     <Compile Include="FizzBuzz\RegolaMultiplaDi7.cs" />
@@ -53,7 +52,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RockPaperScissors\RockPaperScissorsGame.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="FizzBuzz\README.md" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
